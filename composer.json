@@ -1,0 +1,26 @@
+{
+    "name": "frankyso/laravel-ipaymu",
+    "description": "iPaymu-PHP wrapper for Laravel",
+    "keywords": ["laravel", "php", "ipaymu", "library"],
+    "type": "library",
+    "require": {
+        "frankyso/ipaymu": "^1.0.3",
+        "php": ">=7.2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Franky So",
+            "email": "frankyso.mail@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "frankyso\\iPaymu\\Laravel": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    }
+}
