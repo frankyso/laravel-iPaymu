@@ -1,26 +1,57 @@
 {
-    "name": "frankyso/laravel-ipaymu",
-    "description": "iPaymu-PHP wrapper for Laravel",
-    "keywords": ["laravel", "php", "ipaymu", "library"],
-    "type": "library",
-    "require": {
-        "frankyso/ipaymu": "^1.0.3",
-        "php": ">=7.2.0"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Franky So",
-            "email": "frankyso.mail@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "frankyso\\iPaymu\\Laravel": "src/"
-        }
-    },
-    "minimum-stability": "stable",
-    "config": {
-        "sort-packages": true
+  "name": "frankyso/laravel-ipaymu",
+  "description": "iPaymu-PHP wrapper for Laravel",
+  "keywords": [
+    "laravel",
+    "php",
+    "ipaymu",
+    "library"
+  ],
+  "type": "library",
+  "require": {
+    "frankyso/ipaymu": "^1.0.3",
+    "php": ">=7.2.0"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.9@dev",
+    "mockery/mockery": "^1.2.3",
+    "phpunit/phpunit": "^8.3",
+    "orchestra/testbench": "^4.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Franky So",
+      "email": "frankyso.mail@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "frankyso\\iPaymu\\Laravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "frankyso\\iPaymu\\Laravel\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": [
+      "@php vendor/bin/phpunit -c ./ --color"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "frankyso\\iPaymu\\Laravel\\iPaymuServiceProvider"
+      ],
+      "aliases": {
+        "Debugbar": "frankyso\\iPaymu\\Laravel\\iPaymuFacade"
+      }
+    }
+  }
 }

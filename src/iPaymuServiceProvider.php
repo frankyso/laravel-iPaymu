@@ -2,7 +2,7 @@
 namespace frankyso\iPaymu\Laravel;
 
 use Illuminate\Support\ServiceProvider;
-use Frankyso\iPaymu\iPaymu;
+use frankyso\iPaymu\iPaymu;
 
 class iPaymuServiceProvider extends ServiceProvider
 {
@@ -13,8 +13,8 @@ class iPaymuServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('iPaymu',function(){
-            return new iPaymu(config('ipaymu.key'), [config('ipaymu.url_return'), config('ipaymu.url_notify'), config('ipaymu.url_cancel')]);
+        $this->app->singleton('iPaymu',function(){
+            return new iPaymu(config('ipaymu.key'), [url(config('ipaymu.url_return')), url(config('ipaymu.url_notify')), url(config('ipaymu.url_cancel'))]);
         });
     }
 
