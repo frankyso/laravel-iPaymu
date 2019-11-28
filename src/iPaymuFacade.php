@@ -1,6 +1,6 @@
 <?php
-namespace frankyso\iPaymu\Laravel;
 
+namespace frankyso\iPaymu\Laravel;
 
 use Illuminate\Support\Facades\Facade;
 
