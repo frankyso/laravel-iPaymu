@@ -7,6 +7,7 @@ This is [iPaymu-php](https://github.com/frankyso/iPaymu) for Laravel Framework
 [![Total Downloads](https://poser.pugx.org/frankyso/laravel-ipaymu/downloads)](https://packagist.org/packages/frankyso/laravel-ipaymu)
 [![Latest Unstable Version](https://poser.pugx.org/frankyso/laravel-ipaymu/v/unstable)](https://packagist.org/packages/frankyso/laravel-ipaymu)
 [![License](https://poser.pugx.org/frankyso/laravel-ipaymu/license)](https://packagist.org/packages/frankyso/laravel-ipaymu)
+[![StyleCI](https://github.styleci.io/repos/223899774/shield?branch=master)](https://github.styleci.io/repos/223899774)
 
 ## Installation
 The best way to use this package is using [composer](https://getcomposer.org/)
